@@ -1,0 +1,11 @@
+[Unit]
+Description=Fix IPv6 RA settings
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/fix-ipv6-ra.sh
+
+[Install]
+WantedBy=multi-user.target
